@@ -203,7 +203,7 @@ class _HomeScreenState extends State<HomeScreen> {
           drawer: SafeArea(
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.white,
                 // image: DecorationImage(
                 //   image: AssetImage('assets/img/fundo.png'), // Substitua pelo caminho da sua imagem
                 //   fit: BoxFit.cover,
@@ -248,18 +248,18 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.grey),
+                                  color: Colors.white),
                             ),
                             Text("Matricula: ${user!.matricula}",
                                 style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.grey)),
+                                    color: Colors.white)),
                             Text("CPF: ${user!.cpf}",
                                 style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.grey)),
+                                    color: Colors.white)),
                           ],
                         ),
                       ),
@@ -432,63 +432,3 @@ class _HomeScreenState extends State<HomeScreen> {
     _advancedDrawerController.showDrawer();
   }
 }
-// import 'package:carteirasismepe/models/Usuario.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
-//
-// class CustomDrawer extends StatefulWidget {
-//   const CustomDrawer({Key? key, required this.userName, this.user})
-//       : super(key: key);
-//   final String userName;
-//   final Usuario? user;
-//
-//   @override
-//   State<CustomDrawer> createState() => _CustomDrawerState();
-// }
-//
-// class _CustomDrawerState extends State<CustomDrawer> {
-//   final _advancedDrawerController = AdvancedDrawerController();
-//   ValueNotifier<int> _pageIndex = ValueNotifier<int>(0);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return ValueListenableBuilder<
-//         int>(valueListenable: _pageIndex , builder: (context,_pageIndex,child)
-//     {
-//       return AdvancedDrawer(
-//           backdrop:Container(
-//
-//           ),
-//           controller: _advancedDrawerController,
-//           child: Scaffold(
-//             appBar: AppBar(
-//               title: const Text("teste"),
-//               backgroundColor: Colors.blue,
-//               toolbarHeight: 60,
-//               bottom: PreferredSize(
-//                 preferredSize: Size.fromHeight(2),
-//                 child: Container(
-//                   color: Colors.cyanAccent,
-//                   height: 2,
-//                 ),
-//               ),
-//               leading: IconButton(
-//                 onPressed: _handleMenuButtonPressed,
-//                 icon: ,
-//               ),
-//             ),
-//
-//             body: Placeholder(),
-//           ) , drawer: Placeholder(),
-//       )
-//
-//     };
-//     );
-//   }
-//
-//   void _handleMenuButtonPressed() {
-//     // NOTICE: Manage Advanced Drawer state through the Controller.
-//     // _advancedDrawerController.value = AdvancedDrawerValue.visible();
-//     _advancedDrawerController.showDrawer();
-//   }
-// }
