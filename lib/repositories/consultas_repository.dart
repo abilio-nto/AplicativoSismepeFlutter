@@ -20,13 +20,13 @@ class ConsultasRepository{
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     final String? token = sharedPreferences.getString('token');
 
-    // Carregue o certificado
-    ByteData data = await rootBundle.load('assets/certificado/www_sismepe_pe_gov_br.crt');
-    SecurityContext securityContext = SecurityContext.defaultContext;
-    securityContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
-
-    // Crie o HttpClient com o SecurityContext
-    HttpClient client = HttpClient(context: securityContext);
+    // // Carregue o certificado
+    // ByteData data = await rootBundle.load('assets/certificado/www_sismepe_pe_gov_br.crt');
+    // SecurityContext securityContext = SecurityContext.defaultContext;
+    // securityContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
+    //
+    // // Crie o HttpClient com o SecurityContext
+    // HttpClient client = HttpClient(context: securityContext);
 
     // Crie o Dio com o HttpClient
     final dio = Dio(BaseOptions(
