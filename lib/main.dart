@@ -1,22 +1,18 @@
 import 'package:carteirasismepe/models/DadosGlobais.dart';
 import 'package:carteirasismepe/models/login_state.dart';
-import 'package:carteirasismepe/screens/Drawer.dart';
 import 'package:carteirasismepe/screens/SplashScreen.dart';
 import 'package:carteirasismepe/screens/login.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => DadosGlobais(),
-      child: CustomDrawer(userName: "", user: null)
+      child: MyApp(),
     ),
   );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
